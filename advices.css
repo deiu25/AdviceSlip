@@ -1,0 +1,139 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "StratosWeb";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background: #202632;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.patrat {
+  max-width: 540px;
+
+  background: #313a49;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adviceID {
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #53ffab;
+  margin: 47px auto 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.theAdvice {
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  color: #d9d9d9;
+  margin: 0 36px;
+}
+
+.imgs {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  max-width: 463px;
+  width: 100%;
+  margin: 40px 38px;
+  height: 17px;
+  flex-direction: row;
+
+  gap: 15px;
+}
+
+.imgs > img {
+  width: 100%;
+}
+
+.imgMid {
+  gap: 7px;
+  display: flex;
+  flex-direction: row;
+}
+
+.imgJos {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  max-width: 463px;
+  width: 100%;
+  height: 17px;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background-color: #53ffab;
+}
+
+.img {
+  margin: 18px;
+  width: 28px;
+  height: 28px;
+}
+
+@media screen and (max-width: 529px) {
+  .patrat {
+    max-width: 396px;
+  }
+  .theAdvice {
+    font-size: 25px;
+  }
+  .adviceID {
+    font-size: 13px;
+  }
+  .imgs {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .patrat {
+    max-width: 198px;
+    max-height: auto;
+    margin: none;
+    padding: none;
+  }
+  .theAdvice {
+    font-size: 15px;
+  }
+  .adviceID {
+    font-size: 12px;
+    margin: auto;
+  }
+  .imgs {
+    display: none;
+  }
+}
