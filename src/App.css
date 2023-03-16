@@ -1,37 +1,42 @@
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  display: flex;
-}
-
 * {
   box-sizing: border-box;
   font-family: "StratosWeb";
   font-style: normal;
   font-weight: 400;
-}
-
-.container {
-  height: 100%;
-  width: 100%;
-  background: #202632;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #202632 0%, #2c3e50 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  overflow: hidden;
+}
+
 .patrat {
   max-width: 540px;
-
+  max-height: 600px;
   background: #313a49;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-repeat: repeat;
+}
+
+.patrat:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
+  transform: translateY(-5px);
 }
 
 .adviceID {
@@ -40,9 +45,7 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #53ffab;
-  margin: 47px auto 25px;
-  display: flex;
-  flex-direction: row;
+  margin-bottom: 25px;
 }
 
 .theAdvice {
@@ -53,40 +56,6 @@ body {
   margin: 0 36px;
 }
 
-.imgs {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  max-width: 463px;
-  width: 100%;
-  margin: 40px 38px;
-  height: 17px;
-  flex-direction: row;
-
-  gap: 15px;
-}
-
-.imgs > img {
-  width: 100%;
-}
-
-.imgMid {
-  gap: 7px;
-  display: flex;
-  flex-direction: row;
-}
-
-.imgJos {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  max-width: 463px;
-  width: 100%;
-  height: 17px;
-  padding: 0;
-  margin-bottom: 15px;
-}
-
 .button {
   cursor: pointer;
   border: none;
@@ -95,17 +64,33 @@ body {
   width: 65px;
   border-radius: 50%;
   background-color: #53ffab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Roboto", sans-serif; /* Adaugă un font modern */
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-top: 9px;
 }
 
-.img {
-  margin: 18px;
-  width: 28px;
-  height: 28px;
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 529px) {
   .patrat {
     max-width: 396px;
+    padding: 40px;
   }
   .theAdvice {
     font-size: 25px;
@@ -113,18 +98,13 @@ body {
   .adviceID {
     font-size: 13px;
   }
-  .imgs {
-    max-width: 100%;
-    height: auto;
-  }
 }
 
 @media screen and (max-width: 280px) {
   .patrat {
     max-width: 198px;
     max-height: auto;
-    margin: none;
-    padding: none;
+    padding: 30px;
   }
   .theAdvice {
     font-size: 15px;
@@ -132,8 +112,5 @@ body {
   .adviceID {
     font-size: 12px;
     margin: auto;
-  }
-  .imgs {
-    display: none;
   }
 }
