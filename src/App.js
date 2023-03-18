@@ -18,8 +18,8 @@ const App = () => {
     } catch (e) {
       console.log(e);
       setAdvice({
-        id: "Eroare",
-        text: "Nu am putut obține un sfat. Te rugăm să încerci din nou.",
+        id: "Error",
+        text: "Couldn't get a tip. Please try again.",
       });
     }
   };
